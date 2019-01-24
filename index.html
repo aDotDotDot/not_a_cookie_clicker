@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <base href="/cookie/">
+        <meta charset="utf-8" />
+        <title> !!!!! </title>
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class='loader page-1' style='z-index:15'><p>Hey ! Are you awake ?</p>
+            <p><button onclick='skip()'>Skip</button></p>
+        </div>
+        <div class='loader page-2' style='z-index:14'><p>Sorry to be the one telling you that, but, you're dead now.</p>
+            <p><button onclick='skip()'>Skip</button></p>
+        </div>
+        <div class='loader page-3' style='z-index:13'><p>You've been good in your previous life,
+                so good that you've been reincarnated into a more powerful form now.</p>
+                <p><button onclick='skip()'>Skip</button></p>    
+        </div>
+        <div class='loader page-4' style='z-index:12'><p>You're now what you always have called a "God".</p>
+            <p><button onclick='skip()'>Skip</button></p>
+        </div>
+        <div class='loader page-5' style='z-index:11'><p>Don't jump around trying your powers, in here actually you're just a construction worker.</p>
+            <p><button onclick='skip()'>Skip</button></p>
+        </div>
+        <div class='loader page-6' style='z-index:10'><p>You have only one power actually : you can create stars.</p>
+            <p><button onclick='skip()'>Skip</button></p>
+        </div>
+        <div class='loader page-7' style='z-index:9'><p>We're now giving you a free empty Universe, and the software to build what you want, because your powers are limited (for now)</p>
+            <p><button onclick='skip()'>Skip</button></p>
+        </div>
+        <div class='loader page-8' style='z-index:8'><p>A little head's up, the software has been developped by an incredibly lazy person from EA (he's in Hell now, you'll understand why) so you'll have to buy everything through micro-transactions.</p>
+            <p><button onclick='skip()'>Skip</button></p>
+        </div>
+        <div class='loader page-9' style='z-index:7'><p>Unfortunately, you can only pay with stars, an ungodly amount of stars to be more precise.</p>
+            <p><button onclick='skip()'>Skip</button></p>
+        </div>
+        <div class='loader page-10' style='z-index:6'><p>Long story short, you should start farming, you have worlds to build !</p>
+                <p><button onclick='skip()'>Skip</button></p>            
+        </div>    
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+        <div id='game-container' class='click_star'><img class="sun" src='images/sun.png' /></div>
+        <div id='buildings' class='upgrades'></div>
+        <div id='ui' class='scores'>
+            <p>Number of stars : <span id='stars'></span></p>
+            <p>Number of stars (since beginning) : <span id='stars_from_start'></span></p>
+            <p>Level : <span id='level'></span></p>
+            <p>Stars/clic : <span id='stars_per_clic'></span></p>
+            <p><button id='upgrade'>Upgrade</button> price : <span id='upgrade_price'></span></p>
+            <p>Estimated stars/second : <span id='stars_per_second'></span></p>
+            <p><button id='saveGame'>Save</button><button id='loadGame'>Load</button></p>
+        </div>
+        <script type="text/javascript" src='js/big.min.js'></script>
+        <script type="text/javascript" src="js/config.js"></script>
+    </body>  
+</html>  

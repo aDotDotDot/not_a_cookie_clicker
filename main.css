@@ -1,0 +1,231 @@
+/* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color:rgba(33, 33, 33, 0.9);
+    color:#ffffff;
+    display:block;
+    font: 14px/1.3 Arial,sans-serif;
+    height:50px;
+    position:relative;
+    z-index:5;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+header h2{
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+header a, a:visited {
+    text-decoration:none;
+    color:#fcfcfc;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(images/clouds3.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+/* Those are mine */
+.click_star{
+  position:absolute;
+  top:0;
+  left:0;
+  right:20%;
+  bottom:0;
+  width:80%;
+  height:100%;
+  display:block;
+  z-index:4;
+}
+@keyframes happy {
+    0%   {transform: rotate(360deg);}
+    50%  {transform: rotate(340deg);}
+    100% {transform: rotate(360deg);}
+  }
+.click_star .sun{
+    margin-top: 100px;
+    margin-left: 100px;
+    transform: rotate(360deg);
+    transition:  0.5s;
+    cursor: pointer;
+}
+.click_star .sun:hover:not(:active) {
+    animation-name: happy;
+    animation-duration: 0.5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+.click_star .sun:active {
+    transform: rotate(0deg);
+    transition:  0s;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+}
+.scores{
+    position:absolute;
+    top:0;
+    left:75%;
+    right:0;
+    bottom:0;
+    width:23%;
+    height:100%;
+    display:block;
+    margin-left: 2px;
+    z-index:4;
+    font-family: 'Indie Flower', cursive;
+    color: #d4af37;
+    font-size: 1.3em;
+}
+.scores span{
+    display:block;
+    font-size: 1.4em;
+    margin-left: 12px;
+    font-weight: bold;
+}
+.scores button{
+    background-color: transparent;
+    border: dotted #d4af37 1px;
+    color: #d4af37;
+    padding: 8px 1px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive;
+    display: inline-block;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.upgrades{
+    position:absolute;
+    top:70%;
+    left:0;
+    right:25%;
+    bottom:0;
+    width:75%;
+    height:28%;
+    display:block;
+    z-index:4;
+    font-family: 'Indie Flower', cursive;
+    color: #d4af37;
+    font-size: 1.2em;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(50px, auto);
+    cursor: pointer;
+}
+.upgrades div{
+    border:solid #d4af37 1px;
+}
+.loader {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    font-family: 'Indie Flower', cursive;
+    color: #d4af37; 
+    text-align: center;
+    background-color: black;
+    font-size: 4em;
+}
+.loader p{
+    margin: auto;
+}
+.loader p button{
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: transparent;
+    border: dotted #d4af37 1px;
+    color: #d4af37;
+    padding: 1px 1px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive;
+    display: inline-block;
+    font-size: 0.8em;
+    cursor: pointer;
+}
