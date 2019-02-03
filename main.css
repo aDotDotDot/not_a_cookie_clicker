@@ -196,6 +196,15 @@ header a, a:visited {
 .upgrades div{
     border:solid #d4af37 1px;
 }
+.upgrades progress{
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-color: transparent;
+    bottom: 1px;
+    left: 1px;
+}
 .loader {
     position:absolute;
     top:0;
